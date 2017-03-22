@@ -1,2 +1,3 @@
 # steps-tslint
-A Bitrise step for running TSLint
+A [Bitrise](https://www.bitrise.io) step for running [TSLint](https://palantir.github.io/tslint/).
+Ï
