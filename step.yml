@@ -8,12 +8,12 @@ host_os_tags:
   - osx
   - ubuntu
 project_type_tags:
-- ios
-- android
+  - ios
+  - android
 type_tags:
-- typescript
-- lint
-- npm
+  - typescript
+  - lint
+  - npm
 is_requires_admin_user: false
 is_always_run: false
 is_skippable: false
