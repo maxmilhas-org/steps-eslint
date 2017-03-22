@@ -29,9 +29,8 @@ inputs:
       title: The path to the `tslint` command.
       description: |
         The path to the `tslint` executable.
-      is_required: false
   - args: '**/*.ts' -e '**/node_modules/**'
     opts:
       title: Arguments for running `tslint`
-      description: |-
+      description: |
         Arguments are added to the `tslint` command.
