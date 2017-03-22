@@ -26,10 +26,20 @@ inputs:
         You can leave it empty to not change it.
   - path: tslint
     opts:
-      title: The path to the `tslint` command.
+      title: "`tslint` executable path"
       description: |
         The path to the `tslint` executable.
-  - args: '**/*.ts' -e '**/node_modules/**'
+  - version: latest
+    opts:
+      title: Version
+      description: |
+        The version of `tslint` to install if not available.
+  - typescript_version: latest
+    opts:
+      title: TypeScript version
+      description: |
+        The TypeScript version to install if not available.
+  - args: "**/*.ts' -e '**/node_modules/**"
     opts:
       title: Arguments for running `tslint`
       description: |
