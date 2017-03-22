@@ -39,7 +39,7 @@ inputs:
       title: TypeScript version
       description: |
         The TypeScript version to install if not available.
-  - args: "**/*.ts' -e '**/node_modules/**"
+  - args: '"**/*.ts" -e "**/node_modules/**"'
     opts:
       title: Arguments for running `tslint`
       description: |
