@@ -18,19 +18,19 @@ is_requires_admin_user: false
 is_always_run: false
 is_skippable: false
 inputs:
-  - tslint_workdir: $BITRISE_SOURCE_DIR
+  - workdir: $BITRISE_SOURCE_DIR
     opts:
       title: Working directory
       description: |
         Working directory of the step.
         You can leave it empty to not change it.
-  - tslint_path: tslint
+  - path: tslint
     opts:
       title: The path to the `tslint` command.
       description: |
         The path to the `tslint` executable.
       is_required: false
-  - tslint_args: '**/*.ts' -e '**/node_modules/**'
+  - args: '**/*.ts' -e '**/node_modules/**'
     opts:
       title: Arguments for running `tslint`
       description: |-

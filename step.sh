@@ -2,14 +2,14 @@
 
 set -e
 
-TSLINT=${tslint_path}
+TSLINT=${path}
 
 # Change the working dir if necessary
-if [ ! -z "${tslint_workdir}" ] ; then
-  echo "==> Switching to working directory: ${tslint_workdir}"
-  cd "${tslint_workdir}"
+if [ ! -z "${workdir}" ] ; then
+  echo "==> Switching to working directory: ${workdir}"
+  cd "${workdir}"
   if [ $? -ne 0 ] ; then
-    echo " [!] Failed to switch to working directory: ${tslint_workdir}"
+    echo " [!] Failed to switch to working directory: ${workdir}"
     exit 1
   fi
 fi
@@ -25,5 +25,5 @@ else
     npm install tslint@${version} -g
 fi
 
-cd ${tslint_workdir}
-${TSLINT} ${tslint_args}
+cd ${workdir}
+${TSLINT} ${args}
