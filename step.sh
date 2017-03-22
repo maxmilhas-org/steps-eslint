@@ -21,7 +21,7 @@ else
     if which npm > /dev/null; then
         if ! which tsc > /dev/null; then
             echo "==> TypeScript not installed. Installing TypeScript version ${typescript_version}"
-            npm install typescript@{typescript_version} -g
+            npm install typescript@${typescript_version} -g
         fi
     
         echo "==> Installing TSLint version ${version}"
