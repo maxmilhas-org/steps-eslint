@@ -2,7 +2,7 @@
 
 set -e
 
-TSLINT=${path}
+ESLINT=${path}
 
 # Change the working dir if necessary
 if [ ! -z "${workdir}" ] ; then
@@ -14,18 +14,13 @@ if [ ! -z "${workdir}" ] ; then
     fi
 fi
 
-if which ${TSLINT} > /dev/null; then
-    echo "==> TSLint already installed."
+if which ${ESLINT} > /dev/null; then
+    echo "==> ESLint already installed."
 else
-    echo "==> TSLint not installed."
+    echo "==> ESLint not installed."
     if which npm > /dev/null; then
-        if ! which tsc > /dev/null; then
-            echo "==> TypeScript not installed. Installing TypeScript version ${typescript_version}"
-            npm install typescript@${typescript_version} -g
-        fi
-    
-        echo "==> Installing TSLint version ${version}"
-        npm install tslint@${version} -g
+        echo "==> Installing ESLint version ${version}"
+        npm install eslint@${version} -g
     else
         echo " [!] Error: npm not found!"
         exit 1
@@ -33,4 +28,4 @@ else
 fi
 
 cd ${workdir}
-${TSLINT} ${args}
+${ESLINT} ${args}

@@ -1,9 +1,9 @@
-title: Run tslint command
-summary: Runs `tslint` with the given args.
-description: Runs `tslint` with the given args.
-website: https://github.com/ibratoev/steps-tslint
-source_code_url: https://github.com/ibratoev/steps-tslint
-support_url: https://github.com/ibratoev/steps-tslint/issues
+title: Run eslint command
+summary: Runs `eslint` with the given args.
+description: Runs `eslint` with the given args.
+website: https://github.com/maxmilhas-org/steps-tslint
+source_code_url: https://github.com/maxmilhas-org/steps-tslint
+support_url: https://github.com/maxmilhas-org/steps-tslint/issues
 host_os_tags:
   - osx
   - ubuntu
@@ -19,23 +19,18 @@ inputs:
       description: |
         Working directory of the step.
         You can leave it empty to not change it.
-  - path: tslint
+  - path: eslint
     opts:
-      title: "`tslint` executable path"
+      title: "`eslint` executable path"
       description: |
-        The path to the `tslint` executable.
+        The path to the `eslint` executable.
   - version: latest
     opts:
       title: Version
       description: |
-        The version of `tslint` to install if not available.
-  - typescript_version: latest
+        The version of `eslint` to install if not available.
+  - args: '"{App,Tests}/**/*.{js,jsx}"'
     opts:
-      title: TypeScript version
+      title: Arguments for running `eslint`
       description: |
-        The TypeScript version to install if not available.
-  - args: '"**/*.ts" -e "**/node_modules/**"'
-    opts:
-      title: Arguments for running `tslint`
-      description: |
-        Arguments are added to the `tslint` command.
+        Arguments are added to the `eslint` command.
